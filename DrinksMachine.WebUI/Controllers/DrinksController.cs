@@ -50,10 +50,6 @@ namespace DrinksMachine.Controllers
             theModel.stockInfoPepsi = _drinksServices.GetDrinks("Pepsi");
             theModel.stockInfoSoda = _drinksServices.GetDrinks("Soda");
 
-            //theModel.rateCoke = theViewModel.stockInfoCoke.ProductPrice;
-            //theModel.ratePepsi = theViewModel.stockInfoPepsi.ProductPrice;
-            //theModel.rateSoda = theViewModel.stockInfoSoda.ProductPrice;
-
             if (ModelState.IsValid)
             {
                 var saleAmtCoke = theModel.quantityRequiredCoke > 0 ? theModel.quantityRequiredCoke * theModel.stockInfoCoke.ProductPrice : 0;
